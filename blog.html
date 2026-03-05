@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分享笔记 | Yaodong Shen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(229, 231, 235, 0.5); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <nav class="sticky top-0 z-50 glass-card py-4 px-6 mb-8">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="font-bold text-xl tracking-tight text-blue-600">YAODONG.SHEN</h1>
+            <div class="space-x-6 text-sm font-medium hidden md:block text-slate-600">
+                <a href="index.html#about" class="hover:text-blue-600 transition">关于我</a>
+                <a href="projects.html" class="hover:text-blue-600 transition">构建项目</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">作品集</a>
+                <a href="blog.html" class="hover:text-blue-600 transition">分享笔记</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 pb-16">
+
+        <header class="mb-10">
+            <p class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Sharer</p>
+            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">分享笔记与思考</h2>
+            <p class="text-slate-600 text-sm max-w-2xl">
+                记录我在 PLL/NPLL 理论推导、竞赛建模、科研心态调整等方面的一些阶段性思考。
+                这些文章更偏「过程与反思」，而不是 polished 的论文。
+            </p>
+        </header>
+
+        <section class="space-y-4">
+            <article class="flex gap-6 p-4 rounded-xl bg-white hover:shadow-sm transition group border border-slate-100">
+                <div class="hidden sm:block text-slate-400 font-mono text-sm pt-1">2026.03</div>
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition">
+                        理解偏置标签学习 (PLL) 的基础：从损失函数谈起
+                    </h3>
+                    <p class="text-slate-500 text-sm mt-1">
+                        这篇笔记会从最基础的经验风险最小化 (ERM) 出发，推导 PLL 下常见损失形式，并对比 PRISM 框架中的关键改动。
+                        （草稿撰写中，计划补充推导细节与可视化示意。）
+                    </p>
+                </div>
+            </article>
+
+            <article class="flex gap-6 p-4 rounded-xl bg-white hover:shadow-sm transition group border border-slate-100">
+                <div class="hidden sm:block text-slate-400 font-mono text-sm pt-1">2026.02</div>
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition">
+                        美赛 (MCM/ICM) 复盘：数学建模中的协作与算法选型
+                    </h3>
+                    <p class="text-slate-500 text-sm mt-1">
+                        连续两年参加美赛并拿到 S 奖 / H 奖之后，对「怎么选题」「怎么分工」「怎么在限定时间内做出 trade-off」
+                        有了一些更具体的体会，尝试系统性总结出来。
+                    </p>
+                </div>
+            </article>
+
+            <article class="flex gap-6 p-4 rounded-xl bg-white hover:shadow-sm transition group border border-dashed border-slate-200">
+                <div class="hidden sm:block text-slate-400 font-mono text-sm pt-1">Coming soon</div>
+                <div>
+                    <h3 class="font-bold text-slate-800">
+                        （预告）Overfitting in Supervised Learning：从「错误拟合」到「有益记忆」
+                    </h3>
+                    <p class="text-slate-500 text-sm mt-1">
+                        计划整理一篇关于监督学习中过拟合现象的长文，结合近期阅读的论文和自己的实验，讨论「何时过拟合真的有害」这个问题。
+                    </p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-10 text-center">
+        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 YAODONG SHEN · Build with Passion</p>
+    </footer>
+
+</body>
+</html>
+
