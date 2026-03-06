@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荣誉墙与竞赛获奖 | Yaodong Shen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(229, 231, 235, 0.5); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <nav class="sticky top-0 z-50 glass-card py-4 px-6 mb-8">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="font-bold text-xl tracking-tight text-blue-600">YAODONG.SHEN</h1>
+            <div class="space-x-6 text-sm font-medium hidden md:block text-slate-600">
+                <a href="index.html#about" class="hover:text-blue-600 transition">关于我</a>
+                <a href="projects.html" class="hover:text-blue-600 transition">构建项目</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">作品集</a>
+                <a href="blog.html" class="hover:text-blue-600 transition">分享笔记</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 pb-16">
+
+        <header class="mb-10">
+            <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-2">Honor Wall</p>
+            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">荣誉墙 · 竞赛与奖项汇总</h2>
+            <p class="text-slate-600 text-sm max-w-2xl">
+                这里集中展示我在各类学科竞赛、奖学金与实践项目中的完整获奖与荣誉记录。
+                与作品集导航页相比，本页更偏重“证书与结果”的归档与证明，方便在面试、申请或评优时快速查阅。
+            </p>
+        </header>
+
+        <!-- ========== 竞赛类证书区域（原 portfolio 中的竞赛网格整体迁移） ========== -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm mb-10">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                    <i class="fas fa-trophy text-blue-600"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">学科竞赛类</h3>
+                    <p class="text-xs text-slate-500 italic">Competitions & Contests</p>
+                </div>
+            </div>
+
+            <div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-1.5 h-4 bg-blue-500 rounded-full"></span>
+                    代表性竞赛证书
+                </h4>
+                <span class="text-[10px] text-slate-400 font-medium">国家级 / 国际 / 省级竞赛</span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a id="competition-software-cup" href="竞赛获奖/software-cup-2023.pdf.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <object data="竞赛获奖/software-cup-2023.pdf.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-blue-600 font-semibold uppercase">National · 二等奖</p>
+                        <p class="text-sm font-bold text-slate-800">第十二届“中国软件杯”</p>
+                    </div>
+                </a>
+
+                <a id="competition-mcm" href="竞赛获奖/美赛H奖.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <object data="竞赛获奖/美赛H奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-blue-600 font-semibold uppercase">International · H奖</p>
+                        <p class="text-sm font-bold text-slate-800">美国大学生数学建模竞赛</p>
+                    </div>
+                </a>
+
+                <a id="competition-cumcm" href="竞赛获奖/全国大学生数学建模省三等.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <object data="竞赛获奖/全国大学生数学建模省三等.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-blue-600 font-semibold uppercase">Provincial · 三等奖</p>
+                        <p class="text-sm font-bold text-slate-800">全国大学生数学建模竞赛</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/江苏省数学竞赛二等奖.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <object data="竞赛获奖/江苏省数学竞赛二等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-slate-400 uppercase">Math Competition</p>
+                        <p class="text-sm font-semibold text-slate-800">江苏省大学生数学竞赛二等奖</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/计设获奖证书.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <object data="竞赛获奖/计设获奖证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-slate-400 uppercase">Design Competition</p>
+                        <p class="text-sm font-semibold text-slate-800">计算机设计大赛获奖证书</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/外包_01.png" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
+                        <img src="竞赛获奖/外包_01.png" class="w-full h-full object-cover" alt="服务外包创新创业大赛证明">
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-slate-400 uppercase">Outsourcing</p>
+                        <p class="text-sm font-semibold text-slate-800">服务外包创新创业大赛证明</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== 奖学金 / 校级荣誉区域（原结构迁移） ========== -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm mb-10">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+                    <i class="fas fa-medal text-amber-500"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">奖学金与校级荣誉</h3>
+                    <p class="text-xs text-slate-500 italic">Scholarships & Honors</p>
+                </div>
+            </div>
+
+            <div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-1.5 h-4 bg-amber-500 rounded-full"></span>
+                    荣誉类（含奖学金）
+                </h4>
+                <span class="text-[10px] text-slate-400 font-medium">校级奖学金与荣誉称号</span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="竞赛获奖/2022-2023学业优秀奖学金.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2022-2023学业优秀奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">学业优秀奖学金</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2022-2023科技创新奖学金.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2022-2023科技创新奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">科技创新奖学金</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2022-2023优秀学生荣誉称号.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2022-2023优秀学生荣誉称号.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">优秀学生荣誉称号</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2022-2023社会工作优秀奖学金.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2022-2023社会工作优秀奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">社会工作奖学金</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2022年度优秀共青团干部.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2022年度优秀共青团干部.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">优秀共青团干部</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2021-2022最美志愿者称号.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
+                        <object data="竞赛获奖/2021-2022最美志愿者称号.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <p class="text-sm font-semibold text-slate-800">校级“最美志愿者”</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== 课程 / 科创 / 实践类证书区域（原结构迁移） ========== -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm mb-10">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+                    <i class="fas fa-flask text-emerald-500"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">课程 / 科创 / 实践类</h3>
+                    <p class="text-xs text-slate-500 italic">Course Projects, Innovation & Practice</p>
+                </div>
+            </div>
+
+            <div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                    <span class="w-1.5 h-4 bg-emerald-500 rounded-full"></span>
+                    项目结题与实践成果
+                </h4>
+                <span class="text-[10px] text-slate-400 font-medium">项目结题证书与综合竞赛</span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="竞赛获奖/人工智能结课证书.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/人工智能结课证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-emerald-600 font-semibold uppercase">Course</p>
+                        <p class="text-sm font-bold text-slate-800">人工智能课程结课证书</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/指尖星火 结题证书.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/指尖星火 结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-emerald-600 font-semibold uppercase">Innovation</p>
+                        <p class="text-sm font-bold text-slate-800">「指尖星火」科创结题</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/虚拟人%20结题证书.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/虚拟人%20结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-emerald-600 font-semibold uppercase">Innovation</p>
+                        <p class="text-sm font-bold text-slate-800">虚拟人项目结题证书</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/车网通结题证书.pdf" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/车网通结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-slate-400 uppercase">Project</p>
+                        <p class="text-sm font-semibold text-slate-800">「车网通」项目结题证书</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/暑期实践优秀团队.png" target="_blank" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
+                        <img src="竞赛获奖/暑期实践优秀团队.png" class="w-full h-full object-cover" alt="暑期社会实践优秀团队">
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs text-slate-400 uppercase">Social Practice</p>
+                        <p class="text-sm font-semibold text-slate-800">暑期社会实践优秀团队</p>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/1442主题演讲三等奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/1442主题演讲三等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
+                            <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看演讲证书</div>
+                        </object>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Presentation</p>
+                            <p class="text-sm font-bold text-slate-800">1442 主题演讲 · 三等奖</p>
+                        </div>
+                        <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">综合</span>
+                    </div>
+                </a>
+
+                <a href="竞赛获奖/2022保密知识竞赛一等奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/2022保密知识竞赛一等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
+                            <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看保密竞赛证书</div>
+                        </object>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Knowledge</p>
+                            <p class="text-sm font-bold text-slate-800">保密知识竞赛 · 一等奖</p>
+                        </div>
+                        <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">竞赛</span>
+                    </div>
+                </a>
+        
+                <a href="竞赛获奖/笔译大赛%20优胜奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
+                        <object data="竞赛获奖/笔译大赛%20优胜奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
+                            <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看笔译证书</div>
+                        </object>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Language</p>
+                            <p class="text-sm font-bold text-slate-800">笔译大赛 · 优胜奖</p>
+                        </div>
+                        <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">英语</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== 文本形式的荣誉汇总（便于快速浏览与复制） ========== -->
+        <section class="mb-6">
+            <h3 class="text-xl font-bold mb-4">全部奖项与荣誉简明汇总</h3>
+            <ul class="space-y-3 text-sm text-slate-600">
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>第十二届中国软件杯大学生软件设计大赛 全国二等奖</span>
+                    <span class="text-slate-400 italic">2023 · 国家级</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>美国大学生数学建模竞赛 H 奖</span>
+                    <span class="text-slate-400 italic">2023 & 2024 · 国际竞赛</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>全国大学生数学建模竞赛 江苏省三等奖</span>
+                    <span class="text-slate-400 italic">2023 · 省级</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>江苏省大学生数学竞赛 二等奖</span>
+                    <span class="text-slate-400 italic">2022 · 省级</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>学业优秀奖学金 / 科技创新奖学金 / 社会工作奖学金等多项校级奖学金</span>
+                    <span class="text-slate-400 italic">2021–2023 · 校级</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>优秀学生荣誉称号 / 优秀共青团干部 / 校级“最美志愿者”</span>
+                    <span class="text-slate-400 italic">综合素质 · 校级</span>
+                </li>
+                <li class="flex justify-between border-b border-slate-100 pb-2">
+                    <span>保密知识竞赛一等奖、笔译大赛优胜奖、主题演讲竞赛三等奖等</span>
+                    <span class="text-slate-400 italic">语言表达 & 规则意识</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 底部返回入口：引导回作品集导航 / 主页 -->
+        <section class="mt-8 text-center text-xs sm:text-sm text-slate-500 space-y-4">
+            <p>
+                荣誉墙更偏向“结果证明”和“证书归档”。如果你希望从能力视角了解我在不同方向的代表性作品，欢迎回到
+                <a href="portfolio.html" class="text-blue-600 underline underline-offset-2 hover:text-blue-700">作品集与成果总览</a>
+                页面进行浏览。
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="portfolio.html"
+                   class="inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-medium text-slate-700
+                          hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200">
+                    返回作品集总览
+                    <i class="fas fa-layer-group ml-1.5 text-[10px]"></i>
+                </a>
+                <a href="index.html"
+                   class="inline-flex items-center rounded-full border border-slate-200 bg-slate-900 text-slate-50 px-4 py-2 text-xs font-medium
+                          hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-200">
+                    返回个人主页
+                    <i class="fas fa-home ml-1.5 text-[10px]"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-10 text-center">
+        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 YAODONG SHEN · Build with Passion</p>
+    </footer>
+
+</body>
+</html>
+

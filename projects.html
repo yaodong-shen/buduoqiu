@@ -1,181 +1,452 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>构建者项目库 | Yaodong Shen</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(229, 231, 235, 0.5); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 25%),
+                radial-gradient(circle at top right, rgba(244, 63, 94, 0.06), transparent 20%),
+                #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(226, 232, 240, 0.7);
+            box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .soft-card {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 6px;
+            height: 24px;
+            border-radius: 999px;
+            background: linear-gradient(to bottom, #2563eb, #7c3aed);
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+        }
+
+        .paper-card {
+            transition: all 0.28s ease;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            display: inline-block;
+        }
+
+        .abstract-text {
+            color: #475569;
+            line-height: 1.9;
+            font-size: 0.95rem;
+        }
+
+        .pdf-frame {
+            background:
+                linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+
+        .mini-stat {
+            background: rgba(255,255,255,0.85);
+            border: 1px solid rgba(226,232,240,0.9);
+            box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 11px;
+            top: 28px;
+            width: 2px;
+            height: calc(100% + 12px);
+            background: #e2e8f0;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
+<body class="text-slate-900 leading-relaxed">
 
-    <nav class="sticky top-0 z-50 glass-card py-4 px-6 mb-8">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <h1 class="font-bold text-xl tracking-tight text-blue-600">YAODONG.SHEN</h1>
-            <div class="space-x-6 text-sm font-medium hidden md:block text-slate-600">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-card py-4 px-6 mb-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-black text-xl tracking-tight text-blue-600">
+                YAODONG.SHEN
+            </a>
+            <div class="space-x-6 text-sm font-medium hidden md:flex text-slate-600 items-center">
                 <a href="index.html#about" class="hover:text-blue-600 transition">关于我</a>
-                <a href="projects.html" class="hover:text-blue-600 transition">构建项目</a>
+                <a href="projects.html" class="text-blue-600 font-semibold">构建项目</a>
                 <a href="portfolio.html" class="hover:text-blue-600 transition">作品集</a>
                 <a href="blog.html" class="hover:text-blue-600 transition">分享笔记</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-6 pb-16">
+    <main class="max-w-6xl mx-auto px-6 pb-20">
 
-        <header class="mb-10">
-            <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Builder</p>
-            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">科研论文与科创项目</h2>
-            <p class="text-slate-600 text-sm max-w-2xl">
-                这个页面主要记录我正在推进或已完成的科研论文与科创项目，并明确每篇论文的投稿状态与目标会议 / 期刊。
-            </p>
-        </header>
+        <!-- Hero -->
+        <section class="mb-14">
+            <div class="glass-card rounded-3xl p-8 md:p-10">
+                <div class="grid lg:grid-cols-[1.5fr_0.9fr] gap-8 items-center">
+                    <div>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-3">
+                            Builder / Research / Innovation
+                        </p>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight mb-4">
+                            科研论文与科创项目库
+                        </h1>
+                        <p class="text-slate-600 text-base md:text-lg max-w-3xl leading-8">
+                            这里集中展示我在
+                            <span class="font-semibold text-slate-800">偏置标签学习、噪声学习、半监督学习</span>
+                            方向上的代表性研究，以及已经推进或完成的科创与工程实践项目。
+                            页面重点突出“代表作 + 清晰状态 + 可继续深入查看”的浏览逻辑。
+                        </p>
 
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <span class="tag bg-blue-50 text-blue-700">研究方向：PLL / NPLL / SSPLL</span>
+                            <span class="tag bg-emerald-50 text-emerald-700">持续迭代中的论文与项目</span>
+                            <span class="tag bg-violet-50 text-violet-700">理论分析 + 算法设计 + 工程实现</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="mini-stat rounded-2xl p-5">
+                            <p class="text-xs uppercase tracking-wider text-slate-400 mb-1">Representative Papers</p>
+                            <p class="text-3xl font-extrabold text-slate-900">2</p>
+                            <p class="text-sm text-slate-500 mt-1">当前重点展示的核心论文</p>
+                        </div>
+                        <div class="mini-stat rounded-2xl p-5">
+                            <p class="text-xs uppercase tracking-wider text-slate-400 mb-1">Research Focus</p>
+                            <p class="text-lg font-bold text-slate-900">Distribution Correction & Refinement</p>
+                            <p class="text-sm text-slate-500 mt-1">围绕分布偏移、噪声与候选集歧义展开</p>
+                        </div>
+                        <div class="mini-stat rounded-2xl p-5">
+                            <p class="text-xs uppercase tracking-wider text-slate-400 mb-1">Project Type</p>
+                            <p class="text-lg font-bold text-slate-900">Paper / System / Practice</p>
+                            <p class="text-sm text-slate-500 mt-1">兼顾科研表达与工程落地</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured -->
         <section class="mb-16">
-            <h3 class="text-xl font-bold mb-4">代表性科研论文</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="#adapmatch" class="p-6 rounded-2xl bg-white border border-slate-200 hover:shadow-lg transition-all group block">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-full">学术研究 · SSPLL</span>
-                        <span class="text-xs text-slate-400">投稿中 · ICML</span>
+            <h2 class="section-title">代表性科研论文</h2>
+            <div class="grid md:grid-cols-2 gap-7">
+
+                <!-- AdapMatch -->
+                <a href="#adapmatch" class="paper-card soft-card rounded-3xl p-7 block group">
+                    <div class="flex items-start justify-between gap-4 mb-5">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag bg-blue-50 text-blue-700">学术研究 · SSPLL</span>
+                            <span class="tag bg-slate-100 text-slate-600">Semi-Supervised</span>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <div class="flex items-center justify-end gap-2 text-xs font-semibold text-amber-600 mb-1">
+                                <span class="status-dot bg-amber-500"></span>
+                                投稿中
+                            </div>
+                            <div class="text-xs text-slate-400">Target: ICML</div>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition">
-                        AdapMatch: Adaptive Bias Decoupling for SSPLL
-                    </h4>
-                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">
-                        面向未知类别分布下的半监督偏置标签学习，显式刻画「伪标签选择偏置」与「候选集消歧偏置」这两类系统性偏差，并通过 DAS 与 CAD 两个模块进行联合解耦。
+
+                    <h3 class="text-2xl font-extrabold text-slate-900 leading-snug mb-3 group-hover:text-blue-600 transition">
+                        AdapMatch
+                    </h3>
+                    <p class="text-sm font-medium text-slate-500 mb-4">
+                        Adaptive Bias Decoupling for SSPLL
                     </p>
+
+                    <p class="text-slate-600 text-sm leading-7 mb-5">
+                        面向未知类别分布下的半监督偏置标签学习，显式建模
+                        <span class="font-semibold text-slate-800">伪标签选择偏置</span>
+                        与
+                        <span class="font-semibold text-slate-800">候选集消歧偏置</span>，
+                        通过 DAS 与 CAD 两个模块进行联合解耦。
+                    </p>
+
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">PyTorch</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">Semi-supervised</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">SSPLL</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">PyTorch</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">SSPLL</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">Bias Decoupling</span>
                     </div>
                 </a>
 
-                <a href="#prism-paper" class="p-6 rounded-2xl bg-white border border-slate-200 hover:shadow-lg transition-all group block">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 bg-rose-50 text-rose-600 text-xs font-bold rounded-full">研究论文 · NPLL</span>
-                        <span class="text-xs text-slate-400">投稿中 · TPAMI</span>
+                <!-- PRISM -->
+                <a href="#prism-paper" class="paper-card soft-card rounded-3xl p-7 block group">
+                    <div class="flex items-start justify-between gap-4 mb-5">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag bg-rose-50 text-rose-700">研究论文 · NPLL</span>
+                            <span class="tag bg-slate-100 text-slate-600">Theory-Guided</span>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <div class="flex items-center justify-end gap-2 text-xs font-semibold text-amber-600 mb-1">
+                                <span class="status-dot bg-amber-500"></span>
+                                投稿中
+                            </div>
+                            <div class="text-xs text-slate-400">Target: TPAMI</div>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold mb-2 group-hover:text-rose-600 transition">
+
+                    <h3 class="text-2xl font-extrabold text-slate-900 leading-snug mb-3 group-hover:text-rose-600 transition">
+                        PRISM
+                    </h3>
+                    <p class="text-sm font-medium text-slate-500 mb-4">
                         From Distribution Correction to Progressive Refinement
-                    </h4>
-                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">
-                        PRISM：一个面向噪声偏置标签学习（NPLL）的理论指导型框架，从分布校正到候选集渐进式精炼，在多个 PLL/NPLL 基准上取得显著提升。
                     </p>
+
+                    <p class="text-slate-600 text-sm leading-7 mb-5">
+                        一个面向噪声偏置标签学习的理论指导型 plug-in 框架，
+                        从
+                        <span class="font-semibold text-slate-800">分布校正</span>
+                        到
+                        <span class="font-semibold text-slate-800">渐进式精炼</span>，
+                        系统提升 NPLL 的泛化性能。
+                    </p>
+
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">Noisy PLL</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">Generalization Theory</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] rounded uppercase">PRISM</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">Noisy PLL</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">Generalization</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-600 text-[11px] rounded-full font-semibold">PRISM</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section id="adapmatch" class="mb-16">
-            <h3 class="text-2xl font-bold mb-3">
-                AdapMatch: Adaptive Bias Decoupling for Semi-Supervised Partial Label Learning under Unknown Class Distributions
-            </h3>
-            <p class="text-sm text-slate-500 mb-6">
-                Semi-Supervised Partial Label Learning (SSPLL) under unknown class distributions · <span class="font-semibold text-slate-600">投稿中 · ICML</span>
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 items-start">
-                <div>
-                    <h4 class="text-sm font-semibold text-slate-700 mb-2">Abstract</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Partial Label Learning (PLL) trains models from instances with candidate label sets containing the ground-truth, while Semi-Supervised Partial Label Learning (SSPLL) leverages unlabeled data via pseudo-labeling.
-                        In realistic scenarios with unknown class distributions, standard SSPLL pipelines suffer catastrophic performance collapse on minority classes.
-                        We formalize this as a result of two coupled systematic biases: (i) skewed pseudo-label admission (selection bias), where confidence-based filtering causes the effective training distribution to drift towards dominant classes; and (ii) candidate-set domination (disambiguation bias), where class-dependent confidence shifts skew the competition between the ground truth and false positives within candidate sets, leading to directional mis-disambiguation.
-                        Theoretically, we prove that generalization error is jointly governed by the admission-induced distribution gap and the error amplification from these masked false positives.
-                        To directly neutralize these threats, we propose <strong>AdapMatch</strong>, featuring a Distribution-Aware Selector (DAS) to rectify the selection gap by aligning admission with latent priors, and a Calibration-Aware Disambiguator (CAD) to suppress false-positive dominance via logit-adjusted competition.
-                        Across five benchmarks, AdapMatch yields gains up to <strong>41.31%</strong> on CIFAR-10, <strong>17.21%</strong> on STL-10, and <strong>4.80%</strong> on ImageNet-127, proving robust to varying scale, imbalance, and ambiguity.
-                    </p>
+        <!-- AdapMatch Detail -->
+        <section id="adapmatch" class="mb-20">
+            <div class="soft-card rounded-3xl p-7 md:p-8">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="tag bg-blue-50 text-blue-700">SSPLL</span>
+                    <span class="tag bg-amber-50 text-amber-700">投稿中 · ICML</span>
                 </div>
-                <div>
-                    <h4 class="text-sm font-semibold text-slate-700 mb-2">Framework</h4>
-                    <div class="relative w-full h-64 md:h-80 border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-                        <object data="paper/AdapMatch.drawio.pdf" type="application/pdf" class="w-full h-full">
-                            <p class="p-4 text-sm text-slate-500">
-                                当前浏览器暂不支持内嵌 PDF。你可以
-                                <a href="paper/AdapMatch.drawio.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
-                                    在新标签页中打开 AdapMatch 框架图
-                                </a>
-                                进行查看。
+
+                <h2 class="text-3xl font-black text-slate-900 leading-tight mb-3">
+                    AdapMatch: Adaptive Bias Decoupling for Semi-Supervised Partial Label Learning under Unknown Class Distributions
+                </h2>
+
+                <p class="text-slate-500 text-sm mb-8">
+                    研究主题：未知类别分布下的半监督偏置标签学习（SSPLL）
+                </p>
+
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wide mb-2">Abstract</h3>
+                            <p class="abstract-text">
+                                Partial Label Learning (PLL) trains models from instances with candidate label sets containing the ground-truth, while Semi-Supervised Partial Label Learning (SSPLL) leverages unlabeled data via pseudo-labeling.
+                                In realistic scenarios with unknown class distributions, standard SSPLL pipelines suffer catastrophic performance collapse on minority classes.
+                                We formalize this as a result of two coupled systematic biases: (i) skewed pseudo-label admission (selection bias), where confidence-based filtering causes the effective training distribution to drift towards dominant classes; and (ii) candidate-set domination (disambiguation bias), where class-dependent confidence shifts skew the competition between the ground truth and false positives within candidate sets, leading to directional mis-disambiguation.
+                                Theoretically, we prove that generalization error is jointly governed by the admission-induced distribution gap and the error amplification from these masked false positives.
+                                To directly neutralize these threats, we propose <strong>AdapMatch</strong>, featuring a Distribution-Aware Selector (DAS) to rectify the selection gap by aligning admission with latent priors, and a Calibration-Aware Disambiguator (CAD) to suppress false-positive dominance via logit-adjusted competition.
+                                Across five benchmarks, AdapMatch yields gains up to <strong>41.31%</strong> on CIFAR-10, <strong>17.21%</strong> on STL-10, and <strong>4.80%</strong> on ImageNet-127.
                             </p>
-                        </object>
+                        </div>
+
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Research Problem</p>
+                                <p class="text-sm font-semibold text-slate-700">未知分布下的 SSPLL 偏置累积</p>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Core Modules</p>
+                                <p class="text-sm font-semibold text-slate-700">DAS + CAD</p>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Keywords</p>
+                                <p class="text-sm font-semibold text-slate-700">Bias Decoupling / Calibration</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="mt-2 text-xs text-slate-400">AdapMatch 框架示意图（AdapMatch.drawio.pdf）。</p>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wide mb-3">Framework</h3>
+                        <div class="pdf-frame w-full h-72 md:h-96">
+                            <object data="paper/AdapMatch.drawio.pdf" type="application/pdf" class="w-full h-full">
+                                <div class="p-5 text-sm text-slate-500 leading-7">
+                                    当前浏览器暂不支持内嵌 PDF。你可以
+                                    <a href="paper/AdapMatch.drawio.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold">
+                                        在新标签页中打开 AdapMatch 框架图
+                                    </a>
+                                    查看。
+                                </div>
+                            </object>
+                        </div>
+                        <p class="mt-3 text-xs text-slate-400">
+                            AdapMatch 框架示意图（AdapMatch.drawio.pdf）
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="prism-paper" class="mb-16">
-            <h3 class="text-2xl font-bold mb-3">
-                PRISM · Theory-Guided Learning for Noisy Partial Label Learning
-            </h3>
-            <p class="text-sm text-slate-500 mb-6">
-                From Distribution Correction to Progressive Refinement: Theory-Guided Learning for Noisy Partial Label Learning · 投稿 TPAMI 中
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 items-start">
-                <div>
-                    <h4 class="text-sm font-semibold text-slate-700 mb-2">Abstract</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Partial Label Learning (PLL) is a weakly supervised learning paradigm where each instance is annotated with a candidate label set (CLS) that is assumed to contain the true label.
-                        In practice, annotation errors may cause the true label to be absent from the CLS, resulting in <em>Noisy Partial Label Learning</em> (NPLL).
-                        Despite recent progress, existing NPLL methods remain largely empirically designed with limited theoretical understanding.
-                        To this end, we establish a generalization bound for NPLL, showing that learnability is jointly determined by the accuracy of class-distribution estimation, the noise rate, and the candidate-set size.
-                        Motivated by these insights, we propose <strong>PRISM</strong>, a plug-in, which explicitly targets the key factors reducing NPLL generalization.
-                        Specifically, PRISM leverages reliable early-stage class-wise confidence statistics and optimal transport–based alignment to correct class-distribution shift, performs confidence-aware noise separation to rectify noisy labels, and progressively reconstructs candidate sets to reduce ambiguity.
-                        Extensive experiments demonstrate that PRISM is a general plug-in compatible with diverse PLL baselines, delivering consistent improvements and state-of-the-art results, with up to <strong>18.37%</strong> gain on classification accuracy.
-                    </p>
+        <!-- PRISM Detail -->
+        <section id="prism-paper" class="mb-20">
+            <div class="soft-card rounded-3xl p-7 md:p-8">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="tag bg-rose-50 text-rose-700">NPLL</span>
+                    <span class="tag bg-amber-50 text-amber-700">投稿中 · TPAMI</span>
                 </div>
-                <div>
-                    <h4 class="text-sm font-semibold text-slate-700 mb-2">Framework</h4>
-                    <div class="relative w-full h-64 md:h-80 border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
-                        <object data="paper/framework.pdf" type="application/pdf" class="w-full h-full">
-                            <p class="p-4 text-sm text-slate-500">
-                                当前浏览器暂不支持内嵌 PDF。你可以
-                                <a href="paper/framework.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
-                                    在新标签页中打开框架图
-                                </a>
-                                进行查看。
+
+                <h2 class="text-3xl font-black text-slate-900 leading-tight mb-3">
+                    PRISM · Theory-Guided Learning for Noisy Partial Label Learning
+                </h2>
+
+                <p class="text-slate-500 text-sm mb-8">
+                    研究主题：面向 NPLL 的理论分析、分布校正与渐进式候选集精炼
+                </p>
+
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wide mb-2">Abstract</h3>
+                            <p class="abstract-text">
+                                Partial Label Learning (PLL) is a weakly supervised learning paradigm where each instance is annotated with a candidate label set (CLS) that is assumed to contain the true label.
+                                In practice, annotation errors may cause the true label to be absent from the CLS, resulting in <em>Noisy Partial Label Learning</em> (NPLL).
+                                Despite recent progress, existing NPLL methods remain largely empirically designed with limited theoretical understanding.
+                                To this end, we establish a generalization bound for NPLL, showing that learnability is jointly determined by the accuracy of class-distribution estimation, the noise rate, and the candidate-set size.
+                                Motivated by these insights, we propose <strong>PRISM</strong>, a plug-in, which explicitly targets the key factors reducing NPLL generalization.
+                                Specifically, PRISM leverages reliable early-stage class-wise confidence statistics and optimal transport–based alignment to correct class-distribution shift, performs confidence-aware noise separation to rectify noisy labels, and progressively reconstructs candidate sets to reduce ambiguity.
+                                Extensive experiments demonstrate that PRISM is a general plug-in compatible with diverse PLL baselines, delivering consistent improvements and state-of-the-art results, with up to <strong>18.37%</strong> gain on classification accuracy.
                             </p>
-                        </object>
+                        </div>
+
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Research Problem</p>
+                                <p class="text-sm font-semibold text-slate-700">噪声候选集导致的泛化退化</p>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Core Modules</p>
+                                <p class="text-sm font-semibold text-slate-700">Correction / Separation / Reconstruction</p>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                                <p class="text-xs text-slate-400 uppercase mb-2">Keywords</p>
+                                <p class="text-sm font-semibold text-slate-700">Theory-Guided / Plug-in / NPLL</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="mt-2 text-xs text-slate-400">PRISM 框架示意图（framework.pdf）。</p>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wide mb-3">Framework</h3>
+                        <div class="pdf-frame w-full h-72 md:h-96">
+                            <object data="paper/framework.pdf" type="application/pdf" class="w-full h-full">
+                                <div class="p-5 text-sm text-slate-500 leading-7">
+                                    当前浏览器暂不支持内嵌 PDF。你可以
+                                    <a href="paper/framework.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold">
+                                        在新标签页中打开 PRISM 框架图
+                                    </a>
+                                    查看。
+                                </div>
+                            </object>
+                        </div>
+                        <p class="mt-3 text-xs text-slate-400">
+                            PRISM 框架示意图（framework.pdf）
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-10">
-            <h3 class="text-xl font-bold mb-4">全部论文与项目一览</h3>
-            <ul class="space-y-3 text-sm text-slate-600">
-                <li class="flex justify-between">
-                    <span>AdapMatch (SSPLL) · 深度偏置标签学习模型</span>
-                    <span class="text-slate-400">论文 · 投稿中 · ICML</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>PRISM · Noisy Partial Label Learning 理论与算法</span>
-                    <span class="text-slate-400">论文 · 投稿中 · TPAMI</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>VirtueSoul 虚拟人优化平台 · AIGC 应用</span>
-                    <span class="text-slate-400">科创项目 · 工程实践</span>
-                </li>
-            </ul>
+        <!-- All Projects -->
+        <section class="mb-8">
+            <h2 class="section-title">全部论文与项目一览</h2>
+            <div class="soft-card rounded-3xl p-6 md:p-7">
+                <div class="space-y-6">
+
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center">
+                            <div class="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                            <div>
+                                <h3 class="font-bold text-slate-900">AdapMatch (SSPLL)</h3>
+                                <p class="text-sm text-slate-500 mt-1">深度偏置标签学习模型，关注未知类别分布下的偏差解耦与鲁棒学习。</p>
+                            </div>
+                            <span class="text-sm text-slate-400 md:text-right">论文 · 投稿中 · ICML</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-rose-100 border border-rose-200 flex items-center justify-center">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                            <div>
+                                <h3 class="font-bold text-slate-900">PRISM</h3>
+                                <p class="text-sm text-slate-500 mt-1">Noisy Partial Label Learning 的理论与算法框架，强调分布校正与渐进精炼。</p>
+                            </div>
+                            <span class="text-sm text-slate-400 md:text-right">论文 · 投稿中 · TPAMI</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-violet-100 border border-violet-200 flex items-center justify-center">
+                            <div class="w-2.5 h-2.5 rounded-full bg-violet-500"></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                            <div>
+                                <h3 class="font-bold text-slate-900">VirtueSoul 虚拟人优化平台</h3>
+                                <p class="text-sm text-slate-500 mt-1">面向 AIGC 场景的工程实践项目，突出应用构建与交互体验优化。</p>
+                            </div>
+                            <span class="text-sm text-slate-400 md:text-right">科创项目 · 工程实践</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-slate-200 py-10 text-center">
-        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 YAODONG SHEN · Build with Passion</p>
+    <footer class="border-t border-slate-200 bg-white/80 backdrop-blur py-10 text-center">
+        <p class="text-slate-400 text-xs tracking-[0.25em] uppercase">
+            © 2026 YAODONG SHEN · Build with Passion
+        </p>
     </footer>
 
 </body>
 </html>
-

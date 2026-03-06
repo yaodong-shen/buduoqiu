@@ -29,292 +29,409 @@
     <main class="max-w-5xl mx-auto px-6 pb-16">
 
         <header class="mb-10">
-            <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-2">Portfolio</p>
-            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">作品集与竞赛奖项</h2>
+            <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-2">Portfolio · Selected Works</p>
+            <h2 class="text-3xl font-extrabold mb-3 text-slate-900">作品集与成果总览</h2>
             <p class="text-slate-600 text-sm max-w-2xl">
-                这里集中展示我在竞赛、科研与实践中的代表性成果。通过分类整理的荣誉墙，您可以快速了解我的专业技能沉淀与综合素质发展。
+                这一页作为我的作品集导航首页，从「学科竞赛获奖」「科创实践作品集」「AI 设计应用作品集」三个维度精选代表性案例，
+                通过简洁概览 + 跳转入口的方式，帮助你快速了解我在理论竞赛、技术实践与 AI 创意表达上的整体能力版图。
             </p>
         </header>
 
-        <section class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm mb-12">
-            <div class="flex items-center gap-3 mb-8">
-                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                    <i class="fas fa-trophy text-blue-600"></i>
+        <!-- ========================
+             三大作品集区域（总览结构）
+             ======================== -->
+        <section class="space-y-10">
+            <!-- ========================
+                 学科竞赛获奖 · 总览区域
+                 ======================== -->
+            <section class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
+                <div class="flex items-start justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                            <i class="fas fa-trophy text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">学科竞赛获奖</h3>
+                            <p class="text-xs text-slate-500 italic">Academic Competitions & Honor Wall</p>
+                        </div>
+                    </div>
+                    <span class="hidden sm:inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-[11px] font-medium text-blue-700">
+                        理论功底 · 数学建模 · 软件开发
+                    </span>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-slate-900">荣誉墙 / Honor Wall</h3>
-                    <p class="text-xs text-slate-500 italic">Recognitions & Achievements</p>
-                </div>
-            </div>
+                <p class="text-xs sm:text-sm text-slate-600 mb-6">
+                    在这一板块，我精选了几项最具代表性的学科竞赛成果，用以呈现我的数学建模能力、软件工程能力与综合竞赛实力。
+                    更多完整证书与详细说明将集中放在独立的荣誉墙页面中。
+                </p>
 
-            <div class="mb-12">
-                <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2">
-                        <span class="w-1.5 h-4 bg-blue-500 rounded-full"></span>
-                        竞赛类
-                    </h4>
-                    <span class="text-[10px] text-slate-400 font-medium">代表性竞赛证书</span>
-                </div>
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <a href="竞赛获奖/software-cup-2023.pdf.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <object data="竞赛获奖/software-cup-2023.pdf.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-blue-600 font-semibold uppercase">National · 二等奖</p>
-                            <p class="text-sm font-bold text-slate-800">第十二届“中国软件杯”</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/美赛H奖.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <object data="竞赛获奖/美赛H奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-blue-600 font-semibold uppercase">International · H奖</p>
-                            <p class="text-sm font-bold text-slate-800">美国大学生数学建模竞赛</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/全国大学生数学建模省三等.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <object data="竞赛获奖/全国大学生数学建模省三等.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-blue-600 font-semibold uppercase">Provincial · 三等奖</p>
-                            <p class="text-sm font-bold text-slate-800">全国大学生数学建模竞赛</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/江苏省数学竞赛二等奖.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <object data="竞赛获奖/江苏省数学竞赛二等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-slate-400 uppercase">Math Competition</p>
-                            <p class="text-sm font-semibold text-slate-800">江苏省大学生数学竞赛二等奖</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/计设获奖证书.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <object data="竞赛获奖/计设获奖证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-slate-400 uppercase">Design Competition</p>
-                            <p class="text-sm font-semibold text-slate-800">计算机设计大赛获奖证书</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/外包_01.png" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-blue-300 transition-all">
-                            <img src="竞赛获奖/外包_01.png" class="w-full h-full object-cover">
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-slate-400 uppercase">Outsourcing</p>
-                            <p class="text-sm font-semibold text-slate-800">服务外包创新创业大赛证明</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="mb-12">
-                <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2">
-                        <span class="w-1.5 h-4 bg-amber-500 rounded-full"></span>
-                        荣誉类（含奖学金）
-                    </h4>
-                    <span class="text-[10px] text-slate-400 font-medium">校级奖学金与荣誉称号</span>
-                </div>
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <a href="竞赛获奖/2022-2023学业优秀奖学金.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2022-2023学业优秀奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">学业优秀奖学金</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/2022-2023科技创新奖学金.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2022-2023科技创新奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">科技创新奖学金</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/2022-2023优秀学生荣誉称号.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2022-2023优秀学生荣誉称号.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">优秀学生荣誉称号</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/2022-2023社会工作优秀奖学金.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2022-2023社会工作优秀奖学金.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">社会工作奖学金</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/2022年度优秀共青团干部.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2022年度优秀共青团干部.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">优秀共青团干部</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/2021-2022最美志愿者称号.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-amber-300 transition-all">
-                            <object data="竞赛获奖/2021-2022最美志愿者称号.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2 text-center">
-                            <p class="text-sm font-semibold text-slate-800">校级“最美志愿者”</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2">
-                        <span class="w-1.5 h-4 bg-emerald-500 rounded-full"></span>
-                        课程 / 科创 / 实践类
-                    </h4>
-                    <span class="text-[10px] text-slate-400 font-medium">项目结题与实践成果</span>
-                </div>
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <a href="竞赛获奖/人工智能结课证书.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/人工智能结课证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-emerald-600 font-semibold uppercase">Course</p>
-                            <p class="text-sm font-bold text-slate-800">人工智能课程结课证书</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/指尖星火 结题证书.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/指尖星火 结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-emerald-600 font-semibold uppercase">Innovation</p>
-                            <p class="text-sm font-bold text-slate-800">「指尖星火」科创结题</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/虚拟人%20结题证书.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/虚拟人%20结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-emerald-600 font-semibold uppercase">Innovation</p>
-                            <p class="text-sm font-bold text-slate-800">虚拟人项目结题证书</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/车网通结题证书.pdf" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/车网通结题证书.pdf" type="application/pdf" class="w-full h-full pointer-events-none"></object>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-slate-400 uppercase">Project</p>
-                            <p class="text-sm font-semibold text-slate-800">「车网通」项目结题证书</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/暑期实践优秀团队.png" target="_blank" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 group-hover:border-emerald-300 transition-all">
-                            <img src="竞赛获奖/暑期实践优秀团队.png" class="w-full h-full object-cover">
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-xs text-slate-400 uppercase">Social Practice</p>
-                            <p class="text-sm font-semibold text-slate-800">暑期社会实践优秀团队</p>
-                        </div>
-                    </a>
-
-                    <a href="竞赛获奖/1442主题演讲三等奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/1442主题演讲三等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
-                                <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看演讲证书</div>
-                            </object>
-                        </div>
-                        <div class="mt-2 flex items-center justify-between">
-                            <div>
-                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Presentation</p>
-                                <p class="text-sm font-bold text-slate-800">1442 主题演讲 · 三等奖</p>
+                <!-- 代表性卡片区域：学科竞赛获奖 -->
+                <div class="grid gap-5 md:grid-cols-3">
+                    <!-- 软件杯：跳转到荣誉墙对应位置 -->
+                    <a href="honor-wall.html#competition-software-cup"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm
+                              hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white">
+                                <i class="fas fa-code"></i>
                             </div>
-                            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">综合</span>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-blue-600">National · 二等奖</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">第十二届“中国软件杯”大学生软件设计大赛</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-3">
+                                    以工程视角完成从需求分析到系统设计与实现的完整闭环，体现软件工程实践与团队协作能力。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">软件工程</span>
+                            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">全国竞赛</span>
+                            <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">系统设计</span>
                         </div>
                     </a>
 
-                    <a href="竞赛获奖/2022保密知识竞赛一等奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/2022保密知识竞赛一等奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
-                                <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看保密竞赛证书</div>
-                            </object>
-                        </div>
-                        <div class="mt-2 flex items-center justify-between">
-                            <div>
-                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Knowledge</p>
-                                <p class="text-sm font-bold text-slate-800">保密知识竞赛 · 一等奖</p>
+                    <!-- 美赛：跳转到荣誉墙对应位置 -->
+                    <a href="honor-wall.html#competition-mcm"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm
+                              hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-cyan-500 text-white">
+                                <i class="fas fa-square-root-alt"></i>
                             </div>
-                            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">竞赛</span>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-blue-600">International · H奖</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">美国大学生数学建模竞赛（MCM/ICM）</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-3">
+                                    面向真实问题构建可落地的数学模型与数值仿真方案，兼顾理论严谨性与结果解释性。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">数学建模</span>
+                            <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">英文论文</span>
+                            <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">国际竞赛</span>
                         </div>
                     </a>
-            
-                    <a href="竞赛获奖/笔译大赛%20优胜奖.pdf" target="_blank" rel="noopener noreferrer" class="group block">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm group-hover:border-emerald-300 transition-all">
-                            <object data="竞赛获奖/笔译大赛%20优胜奖.pdf" type="application/pdf" class="w-full h-full pointer-events-none">
-                                <div class="w-full h-full flex items-center justify-center text-xs text-slate-400">查看笔译证书</div>
-                            </object>
-                        </div>
-                        <div class="mt-2 flex items-center justify-between">
-                            <div>
-                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wide">Language</p>
-                                <p class="text-sm font-bold text-slate-800">笔译大赛 · 优胜奖</p>
+
+                    <!-- 数模省赛：跳转到荣誉墙对应位置 -->
+                    <a href="honor-wall.html#competition-cumcm"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm
+                              hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-white">
+                                <i class="fas fa-chart-line"></i>
                             </div>
-                            <span class="text-[10px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-600">英语</span>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-blue-600">Provincial · 三等奖</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">全国大学生数学建模竞赛 · 江苏赛区</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-3">
+                                    综合运用优化、统计与编程工具，对复杂系统进行建模、求解与敏感性分析。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">数模竞赛</span>
+                            <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">Python</span>
+                            <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">团队协作</span>
                         </div>
                     </a>
                 </div>
-            </div>
+
+                <!-- 「查看更多竞赛获奖 / 荣誉墙」入口 -->
+                <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <p class="text-[11px] text-slate-500">
+                        更多国家级、省级竞赛、校级奖学金与荣誉称号会统一收纳在「完整荣誉墙」中，避免在首页堆叠过多证书截图。
+                    </p>
+                    <a href="honor-wall.html"
+                       class="inline-flex items-center justify-center rounded-full border border-blue-500 px-4 py-2 text-xs font-medium text-blue-600
+                              hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-200">
+                        查看完整荣誉墙 / 更多竞赛获奖
+                        <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                    </a>
+                    <!-- TODO: 若当前尚未创建 honor-wall.html，可先保留此占位链接，后续将原有证书大网格结构迁移到该页面 -->
+                </div>
+            </section>
+
+            <!-- ========================
+                 科创实践作品集 · 总览区域
+                 ======================== -->
+            <section class="bg-white rounded-3xl border border-emerald-100 p-8 shadow-sm">
+                <div class="flex items-start justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+                            <i class="fas fa-flask text-emerald-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">科创实践作品集</h3>
+                            <p class="text-xs text-slate-500 italic">Research, Engineering & Social Practice</p>
+                        </div>
+                    </div>
+                    <span class="hidden sm:inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-medium text-emerald-700">
+                        项目落地 · 技术实践 · 团队协作
+                    </span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mb-6">
+                    这里聚焦「做出来」的能力，包含科研训练、课程设计、科创项目与实践结题等成果。
+                    首页仅展示少量代表性项目，其余将统一沉淀到科创实践作品集的独立页面中。
+                </p>
+
+                <!-- 代表性卡片区域：科创实践作品集 -->
+                <div class="grid gap-5 md:grid-cols-3">
+                    <!-- 虚拟人项目：跳转到科创实践作品集具体介绍位置 -->
+                    <a href="portfolio-practice.html#virtual-human"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 via-slate-50 to-emerald-50 p-4 shadow-sm
+                              hover:-translate-y-1 hover:shadow-lg hover:border-emerald-300 transition-all duration-300">
+                        <!-- TODO: 若有虚拟人项目独立详情页，请将链接替换为实际文件路径 -->
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-emerald-600">Innovation Project</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">虚拟人互动形象与内容生成系统</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-4">
+                                    基于多模态驱动与语音合成的虚拟人项目，从人物设定、动作驱动到对话逻辑完整打通，
+                                    探索虚拟数字人在人机交互与内容传播中的应用场景。
+                                </p>
+                                <div class="mt-3 flex flex-wrap gap-1.5">
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">虚拟人</span>
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">多模态</span>
+                                    <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">交互设计</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 指尖星火：跳转到科创实践作品集具体介绍位置 -->
+                    <a href="portfolio-practice.html#fingertip-spark"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 via-emerald-50 to-emerald-100 p-4 shadow-sm
+                              hover:-translate-y-1 hover:shadow-lg hover:border-emerald-300 transition-all duration-300">
+                        <!-- TODO: 若有「指尖星火」项目独立详情页，请将链接替换为实际文件路径 -->
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-emerald-600">Innovation & Practice</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">「指尖星火」青年科创与科普项目</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-4">
+                                    面向青年群体的科技公益项目，围绕基础科学素养与数字技能普及展开，
+                                    通过工作坊、互动课程与线上资源搭建形成可复制的活动模板。
+                                </p>
+                                <div class="mt-3 flex flex-wrap gap-1.5">
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">科创实践</span>
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">科普活动</span>
+                                    <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">项目管理</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 课程 / 工程实践示例：跳转到科创实践作品集具体介绍位置 -->
+                    <a href="portfolio-practice.html#ai-course-projects"
+                       class="group relative flex flex-col rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 via-slate-50 to-emerald-50 p-4 shadow-sm
+                              hover:-translate-y-1 hover:shadow-lg hover:border-emerald-300 transition-all duration-300">
+                        <!-- TODO: 若有课程设计 / 工程实践的统一作品页，请将链接替换为实际文件路径 -->
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-emerald-600">Course Project</p>
+                                <h4 class="mt-1 text-sm font-bold text-slate-900">人工智能与「车网通」等课程实践项目合集</h4>
+                                <p class="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-4">
+                                    围绕人工智能、车联网等方向完成多门课程设计与实践结题，涵盖模型训练、系统搭建与工程部署，
+                                    体现从课堂到工程实践的迁移能力。
+                                </p>
+                                <div class="mt-3 flex flex-wrap gap-1.5">
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">课程设计</span>
+                                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700">工程实现</span>
+                                    <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600">AI 应用</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 「查看更多科创实践作品」入口 -->
+                <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <p class="text-[11px] text-slate-500">
+                        完整的科创项目、课程设计与实践结题材料（包括结题证书、项目文档与代码仓库链接）将集中展示在科创实践作品集页面。
+                    </p>
+                    <a href="portfolio-practice.html"
+                       class="inline-flex items-center justify-center rounded-full border border-emerald-500 px-4 py-2 text-xs font-medium text-emerald-600
+                              hover:bg-emerald-50 hover:-translate-y-0.5 transition-all duration-200">
+                        查看更多科创实践作品
+                        <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                    </a>
+                    <!-- TODO: 创建科创实践作品集总览页（如 portfolio-practice.html），并在此保持链接一致 -->
+                </div>
+            </section>
+
+            <!-- ========================
+                 AI 设计应用作品集 · 总览区域
+                 ======================== -->
+            <section class="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-8 shadow-md">
+                <div class="absolute inset-0 pointer-events-none opacity-60"
+                     style="background-image: radial-gradient(circle at 0% 0%, rgba(56,189,248,0.25) 0, transparent 55%),
+                                            radial-gradient(circle at 100% 100%, rgba(129,140,248,0.25) 0, transparent 55%);">
+                </div>
+                <div class="relative flex items-start justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800/80 flex items-center justify-center ring-1 ring-slate-600/60">
+                            <i class="fas fa-wand-magic-sparkles text-sky-300"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-50">AI 设计应用作品集</h3>
+                            <p class="text-xs text-slate-400 italic">AI-Driven Visuals, Interaction & Creative Apps</p>
+                        </div>
+                    </div>
+                    <span class="hidden sm:inline-flex items-center rounded-full bg-slate-800/70 px-3 py-1 text-[11px] font-medium text-slate-200 border border-slate-600/50">
+                        AI 生成 · 交互体验 · 视觉系统
+                    </span>
+                </div>
+                <p class="relative text-xs sm:text-sm text-slate-300 mb-6 max-w-3xl">
+                    这一板块更偏向「作品集封面感」，聚焦我在 AI 生成设计、交互体验与应用开发方面的探索。
+                    通过少量代表性案例呈现设计审美与技术实现的结合，并引导进入更完整的 AI 设计作品集。
+                </p>
+
+                <!-- 代表性卡片区域：AI 设计应用作品集 -->
+                <div class="relative grid gap-5 md:grid-cols-3">
+                    <!-- AI 角色与世界观设定：跳转到 AI 设计作品集具体介绍位置 -->
+                    <a href="portfolio-ai.html#ai-characters"
+                       class="group flex flex-col overflow-hidden rounded-2xl bg-slate-800/70 border border-slate-700 shadow-[0_18px_45px_rgba(15,23,42,0.75)]
+                              hover:border-sky-400/70 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(15,23,42,0.9)] transition-all duration-300">
+                        <!-- TODO: 若有 AI 角色/世界观设定的独立作品页，请替换链接 -->
+                        <div class="relative h-28 sm:h-32 overflow-hidden bg-gradient-to-br from-sky-500 via-indigo-500 to-fuchsia-500">
+                            <div class="absolute inset-0 opacity-60"
+                                 style="background-image: radial-gradient(circle at 0% 0%, rgba(15,23,42,0.25) 0, transparent 55%),
+                                                        radial-gradient(circle at 100% 100%, rgba(15,23,42,0.35) 0, transparent 55%);">
+                            </div>
+                            <div class="relative flex h-full items-end justify-between px-4 pb-3">
+                                <span class="inline-flex items-center rounded-full bg-slate-900/50 px-2 py-0.5 text-[10px] font-medium text-slate-100 ring-1 ring-slate-700/60">
+                                    AI 角色设定
+                                </span>
+                                <i class="fas fa-sparkles text-slate-50/80 text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-slate-50">AI 角色与世界观视觉设定集</h4>
+                            <p class="mt-2 text-[11px] text-slate-300 leading-relaxed line-clamp-3">
+                                利用图像生成模型与提示工程构建统一世界观下的角色形象与场景设定，形成具有延展性的视觉资产库。
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1.5">
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-sky-200">提示工程</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-sky-200">视觉系统</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-slate-200">设定集</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- AI 驱动的交互体验 Demo：跳转到 AI 设计作品集具体介绍位置 -->
+                    <a href="portfolio-ai.html#ai-interaction"
+                       class="group flex flex-col overflow-hidden rounded-2xl bg-slate-800/70 border border-slate-700 shadow-[0_18px_45px_rgba(15,23,42,0.75)]
+                              hover:border-emerald-400/70 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(15,23,42,0.9)] transition-all duration-300">
+                        <!-- TODO: 若有 AI 交互 Demo 汇总页，请替换链接 -->
+                        <div class="relative h-28 sm:h-32 overflow-hidden bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500">
+                            <div class="absolute inset-0 opacity-60"
+                                 style="background-image: radial-gradient(circle at 10% 0%, rgba(15,23,42,0.25) 0, transparent 55%),
+                                                        radial-gradient(circle at 100% 90%, rgba(15,23,42,0.35) 0, transparent 55%);">
+                            </div>
+                            <div class="relative flex h-full items-end justify-between px-4 pb-3">
+                                <span class="inline-flex items-center rounded-full bg-slate-900/50 px-2 py-0.5 text-[10px] font-medium text-slate-100 ring-1 ring-slate-700/60">
+                                    交互 Demo
+                                </span>
+                                <i class="fas fa-mouse-pointer text-slate-50/80 text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-slate-50">AI 驱动的交互体验与原型集合</h4>
+                            <p class="mt-2 text-[11px] text-slate-300 leading-relaxed line-clamp-3">
+                                将大模型、语音识别与前端交互结合，制作问答助手、情绪陪伴、创意辅助等多个交互 Demo，探索 AI 在日常使用场景中的体验设计。
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1.5">
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-emerald-200">大模型应用</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-emerald-200">交互设计</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-slate-200">原型验证</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- AI 辅助的视觉设计产出：跳转到 AI 设计作品集具体介绍位置 -->
+                    <a href="portfolio-ai.html#ai-visuals"
+                       class="group flex flex-col overflow-hidden rounded-2xl bg-slate-800/70 border border-slate-700 shadow-[0_18px_45px_rgba(15,23,42,0.75)]
+                              hover:border-fuchsia-400/70 hover:-translate-y-1.5 hover:shadow-[0_22px_60px_rgba(15,23,42,0.9)] transition-all duration-300">
+                        <!-- TODO: 若有 AI 视觉设计作品合集页，请替换链接 -->
+                        <div class="relative h-28 sm:h-32 overflow-hidden bg-gradient-to-br from-fuchsia-500 via-rose-500 to-amber-400">
+                            <div class="absolute inset-0 opacity-60"
+                                 style="background-image: radial-gradient(circle at 10% 0%, rgba(15,23,42,0.3) 0, transparent 55%),
+                                                        radial-gradient(circle at 90% 100%, rgba(15,23,42,0.4) 0, transparent 55%);">
+                            </div>
+                            <div class="relative flex h-full items-end justify-between px-4 pb-3">
+                                <span class="inline-flex items-center rounded-full bg-slate-900/50 px-2 py-0.5 text-[10px] font-medium text-slate-100 ring-1 ring-slate-700/60">
+                                    视觉合集
+                                </span>
+                                <i class="fas fa-layer-group text-slate-50/80 text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-semibold text-slate-50">AI 辅助视觉设计与版式探索</h4>
+                            <p class="mt-2 text-[11px] text-slate-300 leading-relaxed line-clamp-3">
+                                将 AI 生成图像与传统平面设计方法结合，尝试封面、插画、海报等不同载体的版式与色彩方案，
+                                总结一套可持续迭代的设计语言。
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1.5">
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-fuchsia-200">视觉设计</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-fuchsia-200">品牌感</span>
+                                <span class="rounded-full bg-slate-900/60 px-2 py-0.5 text-[10px] font-medium text-slate-200">AI 辅助</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 「查看更多 AI 设计应用作品」入口 -->
+                <div class="relative mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <p class="text-[11px] text-slate-300 max-w-xl">
+                        为避免在首页堆叠过多预览图，更多 AI 设计案例（包含生成参数、迭代过程与应用落地）将放在专门的 AI 设计作品集页面中。
+                    </p>
+                    <a href="portfolio-ai.html"
+                       class="inline-flex items-center justify-center rounded-full border border-slate-500/70 bg-slate-900/60 px-4 py-2 text-xs font-medium text-slate-50
+                              hover:bg-slate-50 hover:text-slate-900 hover:-translate-y-0.5 transition-all duration-200">
+                        查看更多 AI 设计应用作品
+                        <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                    </a>
+                    <!-- TODO: 创建 AI 设计应用作品集总览页（如 portfolio-ai.html），并在此保持链接一致 -->
+                </div>
+            </section>
         </section>
 
-        <!-- <section>
-            <h3 class="text-xl font-bold mb-6">全部奖项与荣誉汇总</h3>
-            <ul class="space-y-3 text-sm text-slate-600">
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <span>第十二届中国软件杯大学生软件设计大赛 全国二等奖</span>
-                    <span class="text-slate-400 italic">2023 · 国家级</span>
-                </li>
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <span>美国大学生数学建模竞赛 H 奖</span>
-                    <span class="text-slate-400 italic">2023 & 2024 · 国际竞赛</span>
-                </li>
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <span>全国大学生数学建模竞赛 江苏省三等奖</span>
-                    <span class="text-slate-400 italic">2023 · 省级</span>
-                </li>
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <span>江苏省大学生数学竞赛 二等奖</span>
-                    <span class="text-slate-400 italic">2022 · 省级</span>
-                </li>
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <span>累计获得学业优秀、科技创新、社会工作等多项校级奖学金</span>
-                    <span class="text-slate-400 italic">2021–2023 · 校级</span>
-                </li>
-            </ul>
-        </section> -->
+        <!-- 作品集导航页底部补充入口 -->
+        <section class="mt-12 text-center text-xs sm:text-sm text-slate-500 space-y-4">
+            <p>
+                本页仅展示三类作品的代表性案例，用作导航与快速了解。若想查看更完整的项目过程、技术细节与思考记录，
+                可前往各类作品的独立总览页或返回主页。
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="index.html"
+                   class="inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-medium text-slate-700
+                          hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200">
+                    返回个人主页
+                    <i class="fas fa-home ml-1.5 text-[10px]"></i>
+                </a>
+                <a href="projects.html"
+                   class="inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-medium text-slate-700
+                          hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200">
+                    查看工程项目与代码实现
+                    <i class="fas fa-code-branch ml-1.5 text-[10px]"></i>
+                </a>
+                <a href="index.html#contact"
+                   class="inline-flex items-center rounded-full border border-slate-200 bg-slate-900 text-slate-50 px-4 py-2 text-xs font-medium
+                          hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-200">
+                    联系我 / 合作交流
+                    <i class="fas fa-envelope ml-1.5 text-[10px]"></i>
+                </a>
+                <!-- TODO: 若主页中联系区域锚点名称不同，请同步更新此处链接 -->
+            </div>
+        </section>
 
     </main>
 
